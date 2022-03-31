@@ -408,14 +408,13 @@
         </div>
     </section>
     <script>
-        var popped=0,popper=document.getElementById("quickpop"),p=0;
+        var popped=0,popper=document.getElementById("quickpop");
         function quickpop(){
-            p=1;
             if(!popped){popped=1;popper.style.display="block"}
             else{popped=0;popper.style.display="none"}
         };
         setTimeout(()=>{popper.style.display="block";popped=1},3000);
-        setTimeout(()=>{if(p){return};popper.style.display="none";popped=0},6000);
+        setTimeout(()=>{popper.style.display="none";popped=0},6000);
     </script>
 </body>
 </html>
