@@ -188,7 +188,7 @@
                 </div>
             </div>
             <section class="text " id="about" style="margin-top: 15px;">
-                I am Bismark Yamoah (born on October 16, 2001) from the eye and the hope of Africa, Ghana. I am energetic and a confident
+                I am Bismark Yamoah (born on October 16, 2001) from Ghana. I am energetic and a confident
                 person. I am also enthusiastic about things related to technology. I am currently a second year student studying computer
                 science in the University of Ghana. 
                 <div style="margin-top: 10px;">
@@ -408,11 +408,14 @@
         </div>
     </section>
     <script>
-        var popped=0,popper=document.getElementById("quickpop");
+        var popped=0,popper=document.getElementById("quickpop"),p=0;
         function quickpop(){
+            p=1;
             if(!popped){popped=1;popper.style.display="block"}
             else{popped=0;popper.style.display="none"}
-        }
+        };
+        setTimeout(()=>{popper.style.display="block";popped=1},1000);
+        setTimeout(()=>{if(p){return};popper.style.display="block";popped=1},3000);
     </script>
 </body>
 </html>
